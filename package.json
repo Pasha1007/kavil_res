@@ -1,0 +1,29 @@
+{
+  "name": "ultrramartysuperostap",
+  "version": "1.0.0",
+  "description": "\"# ultrraMartysuperOstap\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oracl12/ultrraMartysuperOstap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oracl12/ultrraMartysuperOstap/issues"
+  },
+  "homepage": "https://github.com/oracl12/ultrraMartysuperOstap#readme",
+  "dependencies": {
+    "axios": "^1.6.3",
+    "body-parser": "^1.20.2",
+    "compresion": "^1.7.11",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.3",
+    "html-pdf": "^3.0.1",
+    "jspdf": "^2.5.1"
+  }
+}

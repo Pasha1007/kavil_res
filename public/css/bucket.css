@@ -1,0 +1,167 @@
+#main_container {
+    padding-left: 10%;
+    padding-right: 10%;
+    color: white !important;
+    text-align: center;
+}
+
+#main_container > h1 {
+    padding-top: 2em;
+}
+
+#table_header>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.table_line>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #fab619;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#table_header {
+    background-color: transparent;
+}
+
+.r_line {
+    padding: 5px;
+    border-right: 1px solid white;
+}
+
+.table_line {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #151515;
+    border-radius: 15px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.table_line {
+    @media screen and (max-width: 900px) {
+        font-size: 0.7em;
+    }
+}
+
+.white-arrow {
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+    height: 1.4em;
+    padding: 0 2em 0 2em;
+
+    @media screen and (max-width: 900px) {
+        padding: 0 10px 0 10px;
+        height: 1.2em;
+    }
+}
+
+.line_total_sum {
+    color: #fab619;
+}
+
+#result-panel>* {
+    height: 2em;
+    align-items: center;
+}
+#result-panel > div {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#result-panel button {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#load_order {
+    background-color: gray;
+}
+
+#create_order {
+    background-color: #fab619;
+}
+
+.line_total_sum {
+    font-size: 0.6em;
+}
+
+#pdf_container {
+    margin-top: 1em;
+    text-align: center;
+}
+
+object {
+    width: 50%;
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
+}
+
+#pdf_message {
+    color: wheat;
+    text-align: center;
+}
+
+#details {
+    text-align: left;
+    margin-top: 1em;
+}
+
+#details > div {
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    @media screen and (max-width: 900px) {
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+    }
+}
+
+#details label {
+    @media screen and (max-width: 900px) {
+        font-size: 0.8em;
+    }
+}
+
+#details input {
+    background-color: inherit;
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    padding: 5px;
+
+    @media screen and (max-width: 900px) {
+        height: 2em;
+    }
+}
+
+#details textarea {
+    background-color: inherit;
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    padding: 5px;
+}
+
+#error_message {
+    color: wheat;
+
+    @media screen and (max-width: 900px) {
+        font-size: 0.8em;
+    }
+}
