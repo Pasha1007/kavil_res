@@ -26,7 +26,6 @@
   text-align: center;
 }
 
-#calculator, /*  remove in next fix */
 #container_clients_cases,
 #container_ingredients,
 #container_locations,
@@ -191,12 +190,16 @@ button {
   z-index: 0;
   display: flex;
   justify-content: center;
-  /* flex-direction: row; */
+  flex-direction: row;
   align-items: flex-start;
-  /* background-color: #131313; */
+  background-color: #131313;
 }
-
-/* #firstSlide {
+@media (max-width: 1180px) {
+  #secondary_nav {
+    display: none;
+  }
+}
+#firstSlide {
   width: 50%;
 }
 .about_us_content {
@@ -208,8 +211,9 @@ button {
 .about_us_content h1 {
   margin-top: 20px;
   padding-left: 5%;
-} */
-/* @media (max-width: 780px) {
+}
+
+@media (max-width: 780px) {
   .about_us_content {
     width: 100%;
     display: flex;
@@ -222,7 +226,7 @@ button {
   #firstSlide {
     width: 0%;
   }
-} */
+}
 
 @media (max-width: 400px) {
   #container_about_us {
@@ -248,22 +252,15 @@ button {
   display: inline-block;
   color: #fab619;
 }
-/* .animatedText p {
+.animatedText p {
   font-size: 1.3vw;
   margin-bottom: 0;
-} 
-add in next update
-*/
-.animatedText p {
-  padding-top: 10%;
-  font-size: 1.2vw;
 }
-/* li::marker {
+li::marker {
   color: #fab619;
   font-size: 0.6em;
 }
-  add in next update
- */
+
 #container_ingredients {
   padding-left: 20%;
   padding-right: 20%;
@@ -297,8 +294,7 @@ add in next update
   padding-left: 15%;
   padding-right: 15%;
   height: 90vh;
-  background: url(../img/monet_high_resolution.webp) center center/cover
-    no-repeat #252525; /* remove in next update */
+  background: url(../img/monet_high_resolution.webp) center center/cover;
 }
 @media screen and (max-width: 900px) {
   #mainText .intro-txt {
@@ -411,16 +407,15 @@ add in next update
     display: none !important;
   }
 }
-/* #calculator {
+#calculator {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   width: 370px;
   color: #fff;
   margin-left: 10%;
-} 
-add in next update
-*/
+}
+
 #calculator {
   display: flex;
   justify-content: space-around;
@@ -963,7 +958,7 @@ footer a {
   color: #fff;
 }
 
-.radio-inputs .radio input[name="radio"]:checked + .name {
+.radio-inputs .radio input:checked + .name {
   background-color: #fab619;
   font-weight: 600;
 }
@@ -1153,7 +1148,7 @@ footer a {
 .calc_holder {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 @media screen and (max-width: 780px) {
