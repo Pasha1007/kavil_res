@@ -7,33 +7,32 @@ radioInputs.forEach((radio) => {
 
 function changeURLLanguage() {
   let lang = document.querySelector('input[name="radio"]:checked').value;
-  location.href =
-    window.location.pathname + window.location.search + "#" + lang;
+  localStorage.setItem("language", lang);
   changeLanguage();
 }
 
 function changeLanguage() {
-  let hash = window.location.hash.substring(1);
-  console.log(hash);
+  let lang = localStorage.getItem("language") || "ua";
+  console.log(lang);
 
-  if (!allLang.includes(hash)) {
-    location.href = window.location.pathname + window.location.search + "#ua";
-    hash = "ua";
+  if (!allLang.includes(lang)) {
+    lang = "ua";
+    localStorage.setItem("language", lang);
   }
 
-  document.querySelector(`input[name="radio"][value="${hash}"]`).checked = true;
+  document.querySelector(`input[name="radio"][value="${lang}"]`).checked = true;
 
   for (let key in langArr) {
     let elems = document.querySelectorAll(".lng_" + key);
     elems.forEach(function (elem) {
-      elem.innerHTML = langArr[key][hash];
+      elem.innerHTML = langArr[key][lang];
     });
   }
 }
 
-if (!allLang.includes(window.location.hash.substring(1))) {
-  location.href = window.location.pathname + window.location.search + "#ua";
-  location.reload();
-} else {
-  changeLanguage();
+let savedLanguage = localStorage.getItem("language");
+if (!allLang.includes(savedLanguage)) {
+  localStorage.setItem("language", "ua");
+  savedLanguage = "ua";
 }
+changeLanguage();

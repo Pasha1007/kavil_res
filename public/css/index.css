@@ -1075,17 +1075,20 @@ footer a {
   flex-direction: column;
   align-items: center;
 }
+.task3_title_cont {
+  width: 70%;
+}
 .task3_title {
-  text-align: center;
+  text-align: left;
   width: 500px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 .task3_title h1 {
   color: #fab619;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding-top: 70px;
+  padding-bottom: 30px;
 }
 .task3_title p {
   color: #fff;
@@ -1095,17 +1098,16 @@ footer a {
   font-weight: 700;
 }
 .task3_title2 {
-  color: #fab619;
+  color: #000000;
   font-size: 34px;
   font-weight: 400;
-  padding-top: 40px;
   padding-bottom: 60px;
 }
 .stats_blocks {
   display: flex;
-  width: 80%;
+  width: 70%;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .stats_blocks div {
   display: flex;
@@ -1115,8 +1117,11 @@ footer a {
 }
 .stats_blocks span {
   color: #fab619;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 700;
+}
+.stats_blocks span .small_span {
+  font-size: small;
 }
 .stats_blocks p {
   color: #fff;
@@ -1124,19 +1129,40 @@ footer a {
 }
 .why_blocks {
   display: flex;
-  width: 80%;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 10px;
+  height: 200px;
 }
 .why_txt {
-  width: 10%;
+  width: 16%;
   text-align: left;
-  color: #fff;
-  font-size: 15px;
+  padding-top: 7px;
+  color: #000000;
+  font-size: 17px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
-
+.why_blocks div {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.why_blocks div:nth-child(1) {
+  background-image: url("/img/1.webp");
+}
+.why_blocks div:nth-child(2) {
+  background-image: url("/img/2.webp");
+}
+.why_blocks div:nth-child(3) {
+  background-image: url("/img/3.webp");
+}
+.why_blocks div:nth-child(4) {
+  background-image: url("/img/4.webp");
+}
 .why_blocks div:nth-child(5) {
-  width: 11%;
+  background-image: url("/img/5.webp");
 }
 .calculator_container {
   width: 100%;
@@ -1151,57 +1177,106 @@ footer a {
   align-items: center;
   justify-content: center;
 }
+.white_cont {
+  background-color: #d9d9d9;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+.white_block {
+  width: 70%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 @media screen and (max-width: 780px) {
+  .why_blocks div:nth-child(1),
+  .why_blocks div:nth-child(2),
+  .why_blocks div:nth-child(3),
+  .why_blocks div:nth-child(4),
+  .why_blocks div:nth-child(5) {
+    background-image: none;
+  }
+
+  .white_cont {
+    background-color: #d9d9d9;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    height: 650px;
+  }
   .task3_title {
-    width: 90%;
+    width: 100%;
+    text-align: center;
+  }
+  .task3_title_cont {
+    width: 70%;
+    display: flex;
+    justify-content: center;
   }
   .task3_title h1 {
     padding-top: 40px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
+    font-size: 22px;
   }
   .task3_title p {
     font-size: 11px;
     width: 55%;
     padding-bottom: 15px;
     font-weight: 600;
+    display: none;
   }
   .stats_blocks {
     display: flex;
-    width: 100%;
+    width: 85%;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+  }
+  .stats_blocks div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
   }
   .stats_blocks span {
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .stats_blocks span .small_span {
+    font-size: xx-small;
   }
   .stats_blocks p {
     font-size: 11px;
   }
   .task3_title2 {
-    color: #fab619;
-    font-size: 20px;
-    padding-top: 25px;
+    font-size: 25px;
+    padding-top: 15px;
     padding-bottom: 30px;
+    text-align: center;
   }
   .task3_title2 span {
     font-weight: 500;
   }
   .why_blocks {
     display: flex;
-    width: 80%;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
   }
   .why_txt {
-    width: 89px;
-    text-align: center;
-    color: #fff;
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
     font-size: 13px;
   }
-  .why_blocks div:nth-child(5) {
-    width: 150px;
+
+  .why_blocks div {
+    background-image: none;
   }
   .calc_holder {
     display: flex;

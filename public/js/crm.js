@@ -35,7 +35,7 @@ function sendPostRequest(full_name, phone, success_message, error_message) {
 
       // pop up success
       document.querySelector(".mailer_form").reset();
-      window.location.href = "successPage.html#" + hash;
+      window.location.href = "successPage.html";
       // $('#success_pop_up').css('display', 'flex');
       // $("#root").css("filter", "brightness(0.5) blur(5px)");
 
