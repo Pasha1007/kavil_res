@@ -241,8 +241,8 @@ const langArr = {
     pl: "Przypadki naszych klientów",
   },
   contact_us: {
-    ua: "Хочеш стати партнером?",
-    pl: "Chcesz zostać partnerem?",
+    ua: "Отримай консультацію",
+    pl: "Uzyskaj konsultację",
   },
   leave_application: {
     ua: "Залишай заявку",

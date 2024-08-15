@@ -239,11 +239,7 @@
 
       <div id="container_title" class="video_container">
         <video autoplay muted loop playsinline>
-          <source
-            src="img/video/title_gif_compressed.mp4"
-            class="lazy-load"
-            type="video/mp4"
-          />
+          <source src="img/A_v1.mp4" class="lazy-load" type="video/mp4" />
         </video>
 
         <nav
@@ -790,14 +786,12 @@
       <!-- about us container TASK1 -->
       <div id="container_about_us" class="video_container">
         <div id="firstSlide">
-          <video
-            id="firstVideo"
-            class="lazy-load"
-            onloadstart="this.playbackRate = 1.7;"
-            src="img/video/1.mp4"
-            playsinline
-            muted
-          ></video>
+          <img
+            src="/img/v11.gif"
+            alt=""
+            width="100%"
+            style="margin-top: -93px"
+          />
         </div>
         <div class="about_us_content" style="color: white">
           <h1 class="title lng_about_us" style="padding-bottom: 8%">Про нас</h1>
@@ -1088,95 +1082,106 @@
                     background-color: white;
                   "
                 />
-
                 <div class="container" style="padding: 0; text-align: left">
-                  <div class="row" style="padding-top: 2%">
-                    <div class="col-6" style="font-size: 0.9em">
-                      <span class="lng_number_of_drinks"
-                        >К-сть напоїв в день</span
-                      >
+                  <div>
+                    <div class="row" style="padding-top: 2%">
+                      <div class="col-6" style="font-size: 0.9em">
+                        <span class="lng_number_of_drinks"
+                          >К-сть напоїв в день</span
+                        >
+                      </div>
+                      <div class="col-6 calculator_values">
+                        <p id="drink_value">80</p>
+                      </div>
                     </div>
-                    <div class="col-6 calculator_values">
-                      <p id="drink_value">80</p>
-                    </div>
-                  </div>
 
-                  <input
-                    class="sliderinput"
-                    type="range"
-                    min="1"
-                    max="300"
-                    value="1"
-                    class="slider"
-                    id="drinkRange"
-                    oninput="drinkRangeChange(this.value)"
+                    <input
+                      class="sliderinput"
+                      type="range"
+                      min="1"
+                      max="300"
+                      value="1"
+                      class="slider"
+                      id="drinkRange"
+                      oninput="drinkRangeChange(this.value)"
+                    />
+                  </div>
+                  <div>
+                    <div class="row" style="padding-top: 2%">
+                      <div class="col-6" style="font-size: 0.9em">
+                        <span class="lng_number_of_months"
+                          >Кількість місяців</span
+                        >
+                      </div>
+                      <div class="col-6 calculator_values" id="month_value">
+                        <p id="month_value">12</p>
+                      </div>
+                    </div>
+
+                    <input
+                      class="sliderinput"
+                      type="range"
+                      min="1"
+                      max="36"
+                      value="1"
+                      class="slider"
+                      id="monthRange"
+                      oninput="monthRangeChange(this.value)"
+                    />
+                  </div>
+                  <div>
+                    <div class="row" style="padding-top: 2%">
+                      <div class="col-6" style="font-size: 0.9em">
+                        <span class="lng_number_of_coffe_shops"
+                          >Кількість кав'ярень</span
+                        >
+                      </div>
+                      <div class="col-6 calculator_values" id="coffee_value">
+                        <p id="coffee_value">1</p>
+                      </div>
+                    </div>
+
+                    <input
+                      class="sliderinput"
+                      type="range"
+                      min="1"
+                      max="10"
+                      value="1"
+                      class="slider"
+                      id="cofRange"
+                      oninput="cofRangeChange(this.value)"
+                    />
+                  </div>
+                  <hr
+                    style="background-color: white; width: 100%; height: 3px"
                   />
 
-                  <div class="row" style="padding-top: 2%">
-                    <div class="col-6" style="font-size: 0.9em">
-                      <span class="lng_number_of_months"
-                        >Кількість місяців</span
-                      >
-                    </div>
-                    <div class="col-6 calculator_values" id="month_value">
-                      <p id="month_value">12</p>
-                    </div>
-                  </div>
-
-                  <input
-                    class="sliderinput"
-                    type="range"
-                    min="1"
-                    max="36"
-                    value="1"
-                    class="slider"
-                    id="monthRange"
-                    oninput="monthRangeChange(this.value)"
-                  />
-
-                  <div class="row" style="padding-top: 2%">
-                    <div class="col-6" style="font-size: 0.9em">
-                      <span class="lng_number_of_coffe_shops"
-                        >Кількість кав'ярень</span
-                      >
-                    </div>
-                    <div class="col-6 calculator_values" id="coffee_value">
-                      <p id="coffee_value">1</p>
-                    </div>
-                  </div>
-
-                  <input
-                    class="sliderinput"
-                    type="range"
-                    min="1"
-                    max="10"
-                    value="1"
-                    class="slider"
-                    id="cofRange"
-                    oninput="cofRangeChange(this.value)"
-                  />
-                </div>
-                <hr style="background-color: white; width: 100%; height: 3px" />
-
-                <div class="row" style="padding-bottom: 3%">
-                  <div class="col-8" style="text-align: left; font-size: 0.8em">
-                    <span class="lng_clean_profit"
-                      >Чистий прибуток за місяць:</span
+                  <div class="row" style="padding-bottom: 3%">
+                    <div
+                      class="col-8"
+                      style="text-align: left; font-size: 0.8em"
                     >
+                      <span class="lng_clean_profit"
+                        >Чистий прибуток за місяць:</span
+                      >
+                    </div>
+                    <div class="col-5 calculator_results">
+                      <span id="cleanForMonth"></span>
+                    </div>
                   </div>
-                  <div class="col-5 calculator_results">
-                    <span id="cleanForMonth"></span>
-                  </div>
-                </div>
 
-                <div class="row" style="padding-bottom: 2%">
-                  <div class="col-8" style="text-align: left; font-size: 0.8em">
-                    <span class="lng_clean_profit_period"
-                      >Чистий прибуток за період:</span
+                  <div class="row" style="padding-bottom: 2%">
+                    <div
+                      class="col-8"
+                      style="text-align: left; font-size: 0.8em"
                     >
-                  </div>
-                  <div class="col-5 calculator_results">
-                    <span id="cleanForPeriod"></span>
+                      <span class="lng_clean_profit_period"
+                        >Чистий прибуток за період:</span
+                      >
+                    </div>
+                    <div class="col-5 calculator_results">
+                      <span id="cleanForPeriod"></span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1195,6 +1200,683 @@
         </div>
         <div class="outside_cont">
           <button class="choose_btn2">Обрати</button>
+        </div>
+        <div class="slide_panel left_panel">
+          <button class="close_btn">Назад</button>
+          <div class="choise_div_cont">
+            <div class="price_name_cont">
+              <div>
+                <span class="bold_text">Внутрішня</span>
+                <p>кав’ярня</p>
+              </div>
+              <div>
+                <span class="price">5000$</span>
+                <p>опції впливають на ціну</p>
+              </div>
+            </div>
+            <div class="choises_cont">
+              <div class="choise_list">
+                <div class="category" onclick="toggleContent(this)">
+                  <span class="category_title">Обладнання кав’ярні</span>
+                  <div class="content expanded">
+                    <div class="divider"></div>
+                    <p class="desc">
+                      Ми обладнуємо наші кав’ярні всім необхідним, для
+                      забезпечення зручної експлуатації як вами так і вашими
+                      покупцями.
+                    </p>
+                    <div class="divider"></div>
+                    <div class="marka_model">
+                      <p class="small_text">Охорона і контроль</p>
+                      <div class="choose_model">
+                        <label>
+                          <div
+                            style="
+                              cursor: pointer;
+                              position: relative;
+                              display: flex;
+                              justify-content: flex-start;
+                            "
+                          >
+                            <input
+                              class="security_input"
+                              type="radio"
+                              name="security"
+                              value="camera360"
+                              checked
+                            />
+                            <img
+                              src="/img/camera360.webp"
+                              style="width: 95%"
+                              alt="Option 1"
+                            />
+                          </div>
+                        </label>
+
+                        <label>
+                          <div
+                            style="
+                              cursor: pointer;
+                              position: relative;
+                              display: flex;
+                              justify-content: flex-end;
+                            "
+                          >
+                            <input
+                              type="radio"
+                              name="security"
+                              value="mobapp"
+                              class="security_input"
+                            />
+                            <img
+                              src="/img/mob_app.webp"
+                              style="width: 95%"
+                              alt="Option 2"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="divider" style="margin-top: 10px"></div>
+                    <div class="marka_model">
+                      <p class="small_text">Оплата</p>
+                      <div class="choose_model">
+                        <label>
+                          <div
+                            style="
+                              cursor: pointer;
+                              position: relative;
+                              display: flex;
+                              justify-content: flex-start;
+                            "
+                          >
+                            <input
+                              class="security_input"
+                              type="radio"
+                              name="security"
+                              value="camera360"
+                              checked
+                            />
+                            <img
+                              src="/img/nfc.webp"
+                              style="width: 95%"
+                              alt="Option 1"
+                            />
+                          </div>
+                        </label>
+
+                        <label>
+                          <div
+                            style="
+                              cursor: pointer;
+                              position: relative;
+                              display: flex;
+                              justify-content: flex-end;
+                            "
+                          >
+                            <input
+                              type="radio"
+                              name="security"
+                              value="mobapp"
+                              class="security_input"
+                            />
+                            <img
+                              src="/img/cash_receiver.webp"
+                              style="width: 95%"
+                              alt="Option 2"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="category" onclick="toggleContent(this)">
+                  <span class="category_title">Кавомашинка</span>
+                  <div class="content">
+                    <div class="divider"></div>
+                    <p class="desc">
+                      Ми обладнуємо наші кав’ярні всім необхідним, для
+                      забезпечення зручної експлуатації як вами так і вашими
+                      покупцями.
+                    </p>
+                    <div class="divider"></div>
+                    <div class="marka_model">
+                      <p class="small_text">Марка і модель</p>
+                      <div class="choose_model">
+                        <label>
+                          <div class="coffee_machine_input_cont">
+                            <input
+                              class="input_with_checkark"
+                              type="radio"
+                              name="inside_machine"
+                              value="machine1"
+                              checked
+                            />
+                            <img
+                              src="/img/coffee_machine2.webp"
+                              alt="Option 1"
+                            />
+                            <p class="saeco_phedra">Saeco Phedra (Італія)</p>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+
+                        <label>
+                          <div class="coffee_machine_input_cont">
+                            <input
+                              type="radio"
+                              name="inside_machine"
+                              value="machine2"
+                              class="input_with_checkark"
+                            />
+                            <img
+                              src="/img/coffee_machine1.webp"
+                              alt="Option 2"
+                            />
+                            <p class="saeco_phedra">Saeco Phedra (Італія)</p>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="divider" style="margin-top: 10px"></div>
+                    <div class="new_by">
+                      <p class="small_text">Стан</p>
+                      <div class="choose_model">
+                        <label>
+                          <div class="security_input_cont">
+                            <input
+                              class="input_with_checkark"
+                              type="radio"
+                              name="inside_newby"
+                              value="new"
+                              checked
+                            />
+                            <img src="/img/new_machine.webp" alt="Option 1" />
+                            <div class="stan_text">
+                              <span>Нова</span>
+                              <p>(жодних царапин)</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+
+                        <label>
+                          <div class="security_input_cont">
+                            <input
+                              type="radio"
+                              name="inside_newby"
+                              value="by"
+                              class="input_with_checkark"
+                            />
+                            <img src="/img/by_machine.webp" alt="Option 2" />
+                            <div class="stan_text">
+                              <span>Б/В</span>
+                              <p>(можливі невеликі царапини)</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="category" onclick="toggleContent(this)">
+                  <span class="category_title">Локація</span>
+                  <div class="content">
+                    <div class="divider"></div>
+                    <p class="desc">
+                      Ми надаємо нашим клієнтам допомогу з пошуком локації для
+                      встановлення кав’ярнень. Цей аспект є дуже важливим в
+                      даному бізнесі, оскільки правильна локація може збільшити
+                      кількість вашого доходу вдвічі.
+                    </p>
+                    <div class="divider"></div>
+                    <div class="location_help">
+                      <p class="small_text">Оберіть місто</p>
+                      <div class="choose_model" style="flex-direction: column">
+                        <label>
+                          <div class="location_select_cont">
+                            <input
+                              type="text"
+                              placeholder="Введіть місто"
+                              id="citySearch"
+                              onkeyup="filterFunction()"
+                              name="inside_city_search"
+                            />
+                            <div
+                              id="dropdownContent"
+                              class="dropdown-content"
+                            ></div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="divider" style="margin-top: 10px"></div>
+                    <div class="location_help">
+                      <p class="desc">
+                        Чи потрібна вам допомога із пошуком локації?
+                      </p>
+                      <p class="small_text">Оберіть опцію</p>
+                      <div class="choose_model">
+                        <label>
+                          <div class="location_input_cont">
+                            <input
+                              class="input_with_checkark"
+                              type="radio"
+                              name="inside_location"
+                              value="yes"
+                              checked
+                            />
+                            <div class="location_text">
+                              <span>Так, я не маю локації</span>
+                            </div>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+
+                        <label>
+                          <div class="location_input_cont">
+                            <input
+                              type="radio"
+                              name="inside_location"
+                              value="no"
+                              class="input_with_checkark"
+                            />
+                            <div class="location_text">
+                              <span>Ні, я знайшов локацію</span>
+                            </div>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="category" onclick="toggleContent(this)">
+                  <span class="category_title">Гарантія</span>
+                  <div class="content">
+                    <div class="divider"></div>
+                    <p class="desc"></p>
+                    <div class="divider"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="quant_confirm_cont">
+                <input
+                  id="quantInput"
+                  class="quant_inside"
+                  type="number"
+                  name="quant"
+                  min="1"
+                  max="5"
+                  value="1"
+                />
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    width: 29px;
+                    justify-content: space-between;
+                  "
+                >
+                  <button class="plus_machine" onclick="increment()">></button>
+                  <button class="minus_machine" onclick="decrement()"><</button>
+                </div>
+                <button class="confirm_choise" onclick="confirmInsideMachine()">
+                  Оформити замовлення
+                </button>
+              </div>
+            </div>
+            <div class="quant_confirm_cont2">
+              <button class="confirm_choise2" onclick="confirmOutsideMachine()">
+                Оформити замовлення
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="slide_panel right_panel">
+          <button class="close_btn">Назад</button>
+          <div class="choise_div_cont">
+            <div class="price_name_cont">
+              <div>
+                <span class="bold_text">Вулична</span>
+                <p>кав’ярня</p>
+              </div>
+              <div>
+                <span class="price">5000$</span>
+                <p>опції впливають на ціну</p>
+              </div>
+            </div>
+            <div class="choises_cont">
+              <div class="choise_list">
+                <div class="category" onclick="toggleContent(this)">
+                  <span class="category_title">Обладнання кав’ярні</span>
+                  <div class="content expanded">
+                    <div class="divider"></div>
+                    <p class="desc">
+                      Ми обладнуємо наші кав’ярні всім необхідним, для
+                      забезпечення зручної експлуатації як вами так і вашими
+                      покупцями.
+                    </p>
+                    <div class="divider"></div>
+                    <div class="marka_model">
+                      <p class="small_text">Охорона і контроль</p>
+                      <div class="choose_model">
+                        <label>
+                          <div
+                            style="
+                              cursor: pointer;
+                              position: relative;
+                              display: flex;
+                              justify-content: flex-start;
+                            "
+                          >
+                            <input
+                              class="security_input"
+                              type="radio"
+                              name="security"
+                              value="camera360"
+                              checked
+                            />
+                            <img
+                              src="/img/camera360.webp"
+                              style="width: 95%"
+                              alt="Option 1"
+                            />
+                          </div>
+                        </label>
+
+                        <label>
+                          <div
+                            style="
+                              cursor: pointer;
+                              position: relative;
+                              display: flex;
+                              justify-content: flex-end;
+                            "
+                          >
+                            <input
+                              type="radio"
+                              name="security"
+                              value="mobapp"
+                              class="security_input"
+                            />
+                            <img
+                              src="/img/mob_app.webp"
+                              style="width: 95%"
+                              alt="Option 2"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="divider" style="margin-top: 10px"></div>
+                    <div class="marka_model">
+                      <p class="small_text">Оплата</p>
+                      <div class="choose_model">
+                        <label>
+                          <div
+                            style="
+                              cursor: pointer;
+                              position: relative;
+                              display: flex;
+                              justify-content: flex-start;
+                            "
+                          >
+                            <input
+                              class="security_input"
+                              type="radio"
+                              name="security"
+                              value="camera360"
+                              checked
+                            />
+                            <img
+                              src="/img/nfc.webp"
+                              style="width: 95%"
+                              alt="Option 1"
+                            />
+                          </div>
+                        </label>
+
+                        <label>
+                          <div
+                            style="
+                              cursor: pointer;
+                              position: relative;
+                              display: flex;
+                              justify-content: flex-end;
+                            "
+                          >
+                            <input
+                              type="radio"
+                              name="security"
+                              value="mobapp"
+                              class="security_input"
+                            />
+                            <img
+                              src="/img/cash_receiver.webp"
+                              style="width: 95%"
+                              alt="Option 2"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="category" onclick="toggleContent(this)">
+                  <span class="category_title">Кавомашинка</span>
+                  <div class="content">
+                    <div class="divider"></div>
+                    <p class="desc">
+                      Ми обладнуємо наші кав’ярні всім необхідним, для
+                      забезпечення зручної експлуатації як вами так і вашими
+                      покупцями.
+                    </p>
+                    <div class="divider"></div>
+                    <div class="marka_model">
+                      <p class="small_text">Марка і модель</p>
+                      <div class="choose_model">
+                        <label>
+                          <div class="coffee_machine_input_cont">
+                            <input
+                              class="input_with_checkark"
+                              type="radio"
+                              name="outside_machine"
+                              value="machine1"
+                              checked
+                            />
+                            <img
+                              src="/img/coffee_machine2.webp"
+                              alt="Option 1"
+                            />
+                            <p class="saeco_phedra">Saeco Phedra (Італія)</p>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+
+                        <label>
+                          <div class="coffee_machine_input_cont">
+                            <input
+                              type="radio"
+                              name="outside_machine"
+                              value="machine2"
+                              class="input_with_checkark"
+                            />
+                            <img
+                              src="/img/coffee_machine1.webp"
+                              alt="Option 2"
+                            />
+                            <p class="saeco_phedra">Saeco Phedra (Італія)</p>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="divider" style="margin-top: 10px"></div>
+                    <div class="new_by">
+                      <p class="small_text">Стан</p>
+                      <div class="choose_model">
+                        <label>
+                          <div class="security_input_cont">
+                            <input
+                              class="input_with_checkark"
+                              type="radio"
+                              name="outside_newby"
+                              value="new"
+                              checked
+                            />
+                            <img src="/img/new_machine.webp" alt="Option 1" />
+                            <div class="stan_text">
+                              <span>Нова</span>
+                              <p>(жодних царапин)</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+
+                        <label>
+                          <div class="security_input_cont">
+                            <input
+                              type="radio"
+                              name="outside_newby"
+                              value="by"
+                              class="input_with_checkark"
+                            />
+                            <img src="/img/by_machine.webp" alt="Option 2" />
+                            <div class="stan_text">
+                              <span>Б/В</span>
+                              <p>(можливі невеликі царапини)</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="category" onclick="toggleContent(this)">
+                  <span class="category_title">Локація</span>
+                  <div class="content">
+                    <div class="divider"></div>
+                    <p class="desc">
+                      Ми надаємо нашим клієнтам допомогу з пошуком локації для
+                      встановлення кав’ярнень. Цей аспект є дуже важливим в
+                      даному бізнесі, оскільки правильна локація може збільшити
+                      кількість вашого доходу вдвічі.
+                    </p>
+                    <div class="divider"></div>
+                    <div class="location_help">
+                      <p class="small_text">Оберіть місто</p>
+                      <div class="choose_model" style="flex-direction: column">
+                        <label>
+                          <div class="location_select_cont">
+                            <input
+                              type="text"
+                              placeholder="Введіть місто"
+                              id="citySearch"
+                              onkeyup="filterFunction()"
+                              name="outside_city_search"
+                            />
+                            <div
+                              id="dropdownContent"
+                              class="dropdown-content"
+                            ></div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="divider" style="margin-top: 10px"></div>
+                    <div class="location_help">
+                      <p class="desc">
+                        Чи потрібна вам допомога із пошуком локації?
+                      </p>
+                      <p class="small_text">Оберіть опцію</p>
+                      <div class="choose_model">
+                        <label>
+                          <div class="location_input_cont">
+                            <input
+                              class="input_with_checkark"
+                              type="radio"
+                              name="outside_location"
+                              value="yes"
+                              checked
+                            />
+                            <div class="location_text">
+                              <span>Так, я не маю локації</span>
+                            </div>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+
+                        <label>
+                          <div class="location_input_cont">
+                            <input
+                              type="radio"
+                              name="outside_location"
+                              value="no"
+                              class="input_with_checkark"
+                            />
+                            <div class="location_text">
+                              <span>Ні, я знайшов локацію</span>
+                            </div>
+                            <span class="checkmark">✓</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="category" onclick="toggleContent(this)">
+                  <span class="category_title">Гарантія</span>
+                  <div class="content">
+                    <div class="divider"></div>
+                    <p class="desc"></p>
+                    <div class="divider"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="quant_confirm_cont">
+                <input
+                  id="quantInput2"
+                  class="quant_inside"
+                  type="number"
+                  name="quant"
+                  min="1"
+                  max="5"
+                  value="1"
+                />
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    width: 29px;
+                    justify-content: space-between;
+                  "
+                >
+                  <button class="plus_machine" onclick="increment2()">></button>
+                  <button class="minus_machine" onclick="decrement2()">
+                    <
+                  </button>
+                </div>
+                <button
+                  class="confirm_choise"
+                  onclick="confirmOutsideMachine()"
+                >
+                  Оформити замовлення
+                </button>
+              </div>
+            </div>
+            <div class="quant_confirm_cont2">
+              <button class="confirm_choise2" onclick="confirmOutsideMachine()">
+                Оформити замовлення
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <!-- END TASK 4 -->
@@ -1498,7 +2180,7 @@
         </video>
 
         <div>
-          <h1 class="title lng_contact_us">Хочеш стати партнером?</h1>
+          <h1 class="title lng_contact_us"></h1>
 
           <div id="form_div">
             <h2
@@ -1604,7 +2286,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md">
+            <div class="col-md navigation_cont">
               <h4 class="lng_navigation">Навігація</h4>
               <p>
                 <a class="lng_about_us" href="#container_about_us">Про нас</a>

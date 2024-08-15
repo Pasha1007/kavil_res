@@ -9,6 +9,7 @@ function changeURLLanguage() {
   let lang = document.querySelector('input[name="radio"]:checked').value;
   localStorage.setItem("language", lang);
   changeLanguage();
+  location.reload();
 }
 
 function changeLanguage() {
