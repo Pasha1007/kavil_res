@@ -192,11 +192,56 @@ function filterFunction() {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+let insideOrOutside = "";
 function confirmInsideMachine() {
-  alert("cock");
+  var machineType = document.getElementsByName("inside_machine");
+  var condition = document.getElementsByName("inside_newby");
+  var city = document.getElementById("citySearch").value;
+  var helpLocation = document.getElementsByName("inside_location");
+  var quantity = document.getElementById("quantInput").value;
+  for (i = 0; i < machineType.length; i++) {
+    if ((machineType[i].type = "radio")) {
+      if (machineType[i].checked) console.log(machineType[i].value);
+    }
+  }
+  for (i = 0; i < condition.length; i++) {
+    if ((condition[i].type = "radio")) {
+      if (condition[i].checked) console.log(condition[i].value);
+    }
+  }
+  for (i = 0; i < helpLocation.length; i++) {
+    if ((helpLocation[i].type = "radio")) {
+      if (helpLocation[i].checked) console.log(helpLocation[i].value);
+    }
+  }
+  console.log(city);
+  console.log(quantity);
 }
 function confirmOutsideMachine() {
-  alert("cock2");
+  var machineType = document.getElementsByName("outside_machine");
+  var condition = document.getElementsByName("outside_newby");
+  var city = document.getElementById("citySearch").value;
+  var helpLocation = document.getElementsByName("outside_location");
+  var quantity = document.getElementById("quantInput2").value;
+
+  for (i = 0; i < machineType.length; i++) {
+    if ((machineType[i].type = "radio")) {
+      if (machineType[i].checked) console.log(machineType[i].value);
+    }
+  }
+  for (i = 0; i < condition.length; i++) {
+    if ((condition[i].type = "radio")) {
+      if (condition[i].checked) console.log(condition[i].value);
+    }
+  }
+  for (i = 0; i < helpLocation.length; i++) {
+    if ((helpLocation[i].type = "radio")) {
+      if (helpLocation[i].checked) console.log(helpLocation[i].value);
+    }
+  }
+  console.log(city);
+  console.log(quantity);
 }
 function increment() {
   let input = document.getElementById("quantInput");
