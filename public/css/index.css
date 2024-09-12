@@ -5,7 +5,7 @@
 }
 .activeButton,
 .title {
-  color: #fab619 !important;
+  color: #fab619;
 }
 #container_clients_cases,
 #container_partner {
@@ -53,9 +53,10 @@ button {
   -webkit-tap-highlight-color: transparent !important;
 }
 .title {
-  padding-top: 4% !important;
+  padding-top: 6% !important;
   font-size: 3vw !important;
 }
+
 .video_container {
   position: relative;
   overflow: hidden;
@@ -193,6 +194,48 @@ button {
   flex-direction: row;
   align-items: flex-start;
   background-color: #131313;
+  padding-left: 200px;
+  padding-right: 200px;
+  height: auto;
+}
+.remove_on_mobile {
+  display: block;
+}
+@media (max-width: 780px) {
+  .remove_on_mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1800px) {
+  #container_about_us {
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #131313;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 30px;
+    height: auto;
+  }
+}
+@media (max-width: 900px) {
+  #container_about_us {
+    z-index: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    background-color: #131313;
+    padding: 0;
+  }
+}
+@media (max-width: 1180px) {
+  #secondary_nav {
+    display: none;
+  }
 }
 @media (max-width: 1180px) {
   #secondary_nav {
@@ -200,7 +243,8 @@ button {
   }
 }
 #firstSlide {
-  width: 50%;
+  width: 59%;
+  align-self: center;
 }
 .about_us_content {
   width: 65%;
@@ -210,7 +254,7 @@ button {
 }
 .about_us_content h1 {
   margin-top: 20px;
-  padding-left: 5%;
+  padding-left: 0%;
 }
 
 @media (max-width: 780px) {
@@ -224,7 +268,7 @@ button {
     padding-left: 0%;
   }
   #firstSlide {
-    width: 0%;
+    width: 100%;
   }
   .lng_self_serv {
     display: none;
@@ -262,7 +306,7 @@ button {
   color: #fab619;
 }
 .animatedText p {
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   margin-bottom: 0;
 }
 li::marker {
@@ -360,7 +404,7 @@ li::marker {
   #mainText p,
   #mainText span,
   .animatedText p {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   #container_title button {
     font-size: 1em;
@@ -373,8 +417,8 @@ li::marker {
   }
   .animatedText {
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     text-align: center;
   }
   #container_about_us_text {
@@ -442,6 +486,7 @@ li::marker {
   color: #fff;
   text-align: left;
   font-weight: 700;
+  font-size: 1.2em;
 }
 input[type="number"] {
   -moz-appearance: textfield;
@@ -455,7 +500,7 @@ input::-webkit-outer-spin-button {
   width: 100%;
   height: 2px;
   border-radius: 5px;
-  background: #fab619;
+  background: black;
   outline: 0;
   opacity: 0.7;
   -webkit-transition: 0.2s;
@@ -467,14 +512,14 @@ input::-webkit-outer-spin-button {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #fab619;
+  background: black;
   cursor: pointer;
 }
 .sliderinput::-moz-range-thumb {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #fab619;
+  background: black;
   cursor: pointer;
 }
 #container_coffeemachine {
@@ -972,13 +1017,12 @@ footer a {
 }
 
 .about_us_title {
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 700;
-  padding-left: 5%;
 }
 @media screen and (max-width: 780px) {
   .about_us_title {
-    font-size: 28px;
+    font-size: 17px;
     font-weight: 700;
     padding-left: 5%;
   }
@@ -1012,7 +1056,7 @@ footer a {
 }
 .form-content {
   text-align: center;
-  padding: 20px;
+  padding-bottom: 75px;
 }
 .form-content button {
   border-radius: 9px;
@@ -1023,8 +1067,8 @@ footer a {
 }
 .form-content label {
   font-size: 40px;
-  font-weight: 400;
-  padding-bottom: 50px;
+  font-weight: 500;
+  padding-bottom: 20px;
 }
 .form-content div {
   background-color: white;
@@ -1045,6 +1089,7 @@ footer a {
   margin-top: 50px;
   padding-right: 30px;
 }
+
 @media screen and (max-width: 780px) {
   .get_model_container {
     height: 150px;
@@ -1076,6 +1121,9 @@ footer a {
     width: 40%;
     font-size: 13px;
   }
+  .form-content {
+    padding-bottom: 0px;
+  }
   .navigation_cont {
     display: none;
   }
@@ -1088,7 +1136,7 @@ footer a {
   align-items: center;
 }
 .task3_title_cont {
-  width: 70%;
+  width: 65%;
 }
 .task3_title {
   text-align: left;
@@ -1117,7 +1165,7 @@ footer a {
 }
 .stats_blocks {
   display: flex;
-  width: 70%;
+  width: 65%;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -1178,6 +1226,10 @@ footer a {
 }
 .calculator_container {
   width: 100%;
+  background-image: url("/img/calc_bkg.webp");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .one_cup_info {
   width: 25%;
@@ -1197,11 +1249,49 @@ footer a {
   margin-top: 70px;
 }
 .white_block {
-  width: 70%;
+  width: 65%;
   padding-top: 40px;
   padding-bottom: 40px;
 }
-
+.lng_count_profit {
+  background-color: #000000;
+  color: transparent;
+  background-clip: text;
+  text-shadow: 0px 2px 3px rgb(191 143 112 / 74%);
+}
+.lng_profit_calculator {
+  font-weight: 700;
+  background-color: #000000;
+  color: transparent;
+  background-clip: text;
+  text-shadow: 0px 2px 3px rgb(191 143 112 / 74%);
+}
+.make_depth {
+  color: white;
+}
+.lng_net_profit {
+  color: #fab619;
+  font-weight: 600;
+}
+.lng_avg_price,
+.lng_sobivartist,
+.lng_one_drink,
+.lng_napii_cost {
+  color: #fab619;
+}
+@media screen and (min-width: 780px) {
+  .lng_avg_price,
+  .lng_one_drink,
+  .lng_napii_cost,
+  .lng_sobivartist,
+  .lng_net_profit,
+  .make_depth {
+    background-color: #000000;
+    color: transparent;
+    background-clip: text;
+    text-shadow: 0px 2px 3px rgb(191 143 112 / 74%);
+  }
+}
 @media screen and (max-width: 780px) {
   .why_blocks div:nth-child(1),
   .why_blocks div:nth-child(2),
@@ -1303,11 +1393,29 @@ footer a {
     width: 73%;
   }
   #calculator {
-    padding-top: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 153px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 35px;
+  }
+  #calculator hr {
+    display: none;
+  }
+  .lng_count_profit {
+    background-color: none;
+    color: #fab619;
+    background-clip: none;
+    text-shadow: none;
   }
 }
+.calculator_values,
+.calculator_results {
+  background-color: #000000;
+  color: transparent;
+  background-clip: text;
+  text-shadow: 0px 2px 3px rgb(191 143 112 / 74%);
+}
+
 .choose_ur_coffe {
   color: #fab619;
   font-size: 43px;
@@ -1319,6 +1427,11 @@ footer a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-image: url("/img/coffee_choose_bg.webp");
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  gap: 20vw;
 }
 .inside_cont {
   display: flex;
@@ -1326,10 +1439,10 @@ footer a {
   align-items: end;
   width: 49.9%;
   height: 100%;
-  background-image: url("/img/indoor.webp");
+  /* background-image: url("/img/indoor.webp");
   background-position: top;
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 .outside_cont {
   display: flex;
@@ -1337,10 +1450,10 @@ footer a {
   align-items: end;
   width: 49.9%;
   height: 100%;
-  background-image: url("/img/outdoor.webp");
+  /* background-image: url("/img/outdoor.webp");
   background-position: top;
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 .choose_btn1 {
   border-radius: 9px;
@@ -1351,7 +1464,7 @@ footer a {
   font-weight: 400;
   font-size: 22px;
   margin-bottom: 30px;
-  margin-right: 200px;
+  /* margin-right: 200px; */
   box-shadow: 0px 0px 20px 5px black;
 }
 .choose_btn2 {
@@ -1363,7 +1476,7 @@ footer a {
   font-weight: 400;
   font-size: 22px;
   margin-bottom: 30px;
-  margin-left: 220px;
+  /* margin-left: 220px; */
   box-shadow: 0px 0px 20px 5px black;
 }
 .slide_panel {
@@ -1380,12 +1493,16 @@ footer a {
 .left_panel {
   left: 0;
   transform: translateX(-100%);
+  background-image: url("/img/coffee_choose_bg_out.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .right_panel {
   right: 0;
   transform: translateX(100%);
-  background-image: url("/img/choose_coffee_bg.webp");
+  background-image: url("/img/choose_coffee_bg_in.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -1404,8 +1521,8 @@ footer a {
   height: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
+
 .price_name_cont div:nth-child(2) {
   text-align: right;
 }
@@ -1456,11 +1573,18 @@ footer a {
 }
 .desc {
   margin: 0;
-  padding: 10px;
   width: 100%;
+  padding: 10px;
+}
+.desc_garant {
+  margin: 0;
+  padding: 20px 0px 20px 0px;
+  width: 100%;
+  line-height: 19px;
 }
 .small_text {
-  padding: 10px;
+  padding: 2px;
+  padding-left: 17px;
   font-size: smaller;
   opacity: 0.6;
   padding-bottom: -10px;
@@ -1610,21 +1734,24 @@ footer a {
 }
 
 @media screen and (max-width: 1536px) {
+  .choise_container {
+    gap: 17vw;
+  }
   .choose_btn1 {
     padding: 10px;
     padding-inline: 60px;
 
     margin-bottom: 50px;
-    margin-right: 140px;
-    box-shadow: 0px 0px 20px 5px black;
+    /* margin-right: 140px; */
+    box-shadow: 0px 0px 20px 0px black;
   }
   .choose_btn2 {
     padding: 10px;
     padding-inline: 60px;
 
     margin-bottom: 50px;
-    margin-left: 160px;
-    box-shadow: 0px 0px 20px 5px black;
+    /* margin-left: 160px; */
+    box-shadow: 0px 0px 20px 0px black;
   }
   .choise_div_cont {
     gap: 42px;
@@ -1658,8 +1785,23 @@ footer a {
   .security_input_cont img {
     width: 225px;
   }
+  .calculator_container {
+    background-size: 85%;
+  }
+}
+.price_name_cont2 {
+  display: none;
+}
+.price_name_cont4 {
+  display: block;
 }
 @media screen and (max-width: 780px) {
+  .choose_model {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .choose_ur_coffe {
     color: #fab619;
     font-size: 25px;
@@ -1667,45 +1809,49 @@ footer a {
     padding-top: 20px;
   }
   .choise_container {
-    height: 35vh;
+    height: 65vh;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-image: url("/img/coffee_choose_bg_mobile.webp");
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
   .inside_cont {
     width: 49.9%;
     height: 100%;
-    background-image: url(/img/indoor.webp);
+    /* background-image: url(/img/indoor.webp);
     background-position: top right;
     background-size: 160%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
   }
   .outside_cont {
     width: 49.9%;
     height: 100%;
-    background-image: url(/img/outdoor.webp);
+    /* background-image: url(/img/outdoor.webp);
     background-position: top left;
     background-size: 160%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
   }
   .choose_btn1 {
     border-radius: 4px;
-    padding: 3px;
+    padding: 5px;
     padding-inline: 22px;
-    margin-bottom: 14px;
-    margin-right: 32%;
-    font-size: 10px;
-    box-shadow: 0px 0px 20px 5px black;
+    margin-bottom: 10px;
+    /* margin-right: 32%; */
+    font-size: 13px;
+    box-shadow: none;
   }
   .choose_btn2 {
     border-radius: 4px;
-    padding: 3px;
+    padding: 5px;
     padding-inline: 22px;
-    margin-bottom: 14px;
-    margin-left: 37%;
-    font-size: 10px;
-    box-shadow: 0px 0px 20px 5px black;
+    margin-bottom: 10px;
+    /* margin-left: 37%; */
+    font-size: 13px;
+    box-shadow: none;
   }
   .choise_div_cont {
     flex-direction: column;
@@ -1713,8 +1859,16 @@ footer a {
     gap: 5px;
   }
   .price_name_cont {
+    /* width: 100%;
+    height: auto; */
+    display: none;
+  }
+  .price_name_cont3 {
+    display: none;
+  }
+  .price_name_cont2 {
+    display: block;
     width: 100%;
-    height: auto;
   }
   .choises_cont {
     width: 100%;
@@ -1732,6 +1886,7 @@ footer a {
   }
   .desc {
     font-size: 12px;
+    line-height: 15px;
   }
   .small_text {
     padding: 5px;
@@ -1786,6 +1941,11 @@ footer a {
   /* #form_div p {
     display: none;
   } */
+  .calculator_container {
+    background-image: url("/img/calc_bkg_mobile.webp");
+    background-position-y: bottom;
+    background-position-y: 97%;
+  }
 }
 
 .dropdown {
@@ -1857,4 +2017,29 @@ footer a {
   rotate: 270deg;
   font-size: 20px;
   line-height: normal;
+}
+.confirm_popup_cont {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background-color: #00000085;
+}
+.confirm_popup_cont2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background-color: #00000085;
+}
+.confirm_popup {
+  position: relative;
+  background-color: #252525;
+  z-index: 1000;
 }

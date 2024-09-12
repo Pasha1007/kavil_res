@@ -22,28 +22,50 @@ function formatCurrencyUah(amount) {
     maximumFractionDigits: 0,
   });
 }
+function formatCurrencyUsd(amount) {
+  const plnAmount = amount * 0.024;
+  return plnAmount.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  });
+}
+function getCurrentLanguage() {
+  return localStorage.getItem("language");
+}
 function setTotalForMonth() {
   var result = 16 * drinkVal * 30 * cofVal;
+  let lang = getCurrentLanguage();
   if (lang === "ua") {
     document.getElementById("cleanForMonth").textContent =
       formatCurrencyUah(result);
     console.log(result);
-  } else {
+  } else if (lang === "pl") {
     document.getElementById("cleanForMonth").textContent =
       formatCurrencyPln(result);
+    console.log(result);
+  } else {
+    document.getElementById("cleanForMonth").textContent =
+      formatCurrencyUsd(result);
     console.log(result);
   }
 }
 
 function setTotalForPeriod() {
   var result = 16 * drinkVal * 30 * monthVal * cofVal;
+  let lang = getCurrentLanguage();
   if (lang === "ua") {
     document.getElementById("cleanForPeriod").textContent =
       formatCurrencyUah(result);
     console.log(result);
-  } else {
+  } else if (lang === "pl") {
     document.getElementById("cleanForPeriod").textContent =
       formatCurrencyPln(result);
+    console.log(result);
+  } else {
+    document.getElementById("cleanForPeriod").textContent =
+      formatCurrencyUsd(result);
     console.log(result);
   }
 }
@@ -51,22 +73,23 @@ function drinkRangeChange(val) {
   drinkVal = val;
   setTotalForMonth();
   setTotalForPeriod();
-  $("#drink_value").text(val);
+  document.getElementById("drink_value").textContent = val;
 }
 
 function monthRangeChange(val) {
   monthVal = val;
   setTotalForPeriod();
-  $("#month_value").text(val);
+  document.getElementById("coffee_value").textContent = val;
 }
 
 function cofRangeChange(val) {
   cofVal = val;
   setTotalForMonth();
   setTotalForPeriod();
-  $("#coffee_value").text(val);
+  document.getElementById("coffee_value").textContent = val;
 }
-
+setTotalForMonth();
+setTotalForPeriod();
 function scrollToTop() {
   $("html, body").animate({ scrollTop: 0 }, "fast");
 }
@@ -137,6 +160,71 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// document.addEventListener("DOMContentLoaded", function () {
+//   const dispencerBlock = document.getElementById("dispencer-block");
+//   const coinReceiverBlock = document.getElementById("coin-receiver-block");
+//   const dispencerCheckbox = document.getElementById("dispencer-checkbox");
+//   const coinReceiverCheckbox = document.getElementById(
+//     "coin-receiver-checkbox"
+//   );
+//   const dispencerImg = document.getElementById("dispencer-img");
+//   const coinReceiverImg = document.getElementById("coin-receiver-img");
+
+//   function toggleSelection(checkbox, img, selectedSrc, unselectedSrc) {
+//     if (checkbox.checked) {
+//       img.src = selectedSrc;
+//     } else {
+//       img.src = unselectedSrc;
+//     }
+//   }
+
+//   dispencerBlock.addEventListener("click", function () {
+//     dispencerCheckbox.checked = !dispencerCheckbox.checked;
+//     toggleSelection(
+//       dispencerCheckbox,
+//       dispencerImg,
+//       dispencerImg.getAttribute("data-src-selected"),
+//       dispencerImg.getAttribute("data-src-unselected")
+//     );
+//   });
+
+//   coinReceiverBlock.addEventListener("click", function () {
+//     coinReceiverCheckbox.checked = !coinReceiverCheckbox.checked;
+//     toggleSelection(
+//       coinReceiverCheckbox,
+//       coinReceiverImg,
+//       coinReceiverImg.getAttribute("data-src-selected"),
+//       coinReceiverImg.getAttribute("data-src-unselected")
+//     );
+//   });
+// });
+document.addEventListener("DOMContentLoaded", function () {
+  const blocks = document.querySelectorAll(".image-block");
+
+  function toggleSelection(checkbox, img, selectedSrc, unselectedSrc) {
+    if (checkbox.checked) {
+      img.src = selectedSrc;
+    } else {
+      img.src = unselectedSrc;
+    }
+  }
+
+  blocks.forEach(function (block) {
+    const checkbox = block.querySelector('input[type="checkbox"]');
+    const img = block.querySelector("img");
+
+    block.addEventListener("click", function () {
+      checkbox.checked = !checkbox.checked;
+      toggleSelection(
+        checkbox,
+        img,
+        img.getAttribute("data-src-selected"),
+        img.getAttribute("data-src-unselected")
+      );
+    });
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   fetchCities();
 });
@@ -192,9 +280,32 @@ function filterFunction() {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
+$(".coffemachine_form").submit(function (e) {
+  e.preventDefault();
+  var form = $(this);
 
+  var full_name = form.find("#name");
+  var full_name_value = full_name.val();
+  var phone = form.find("#phone");
+  var phone_value = phone.val();
+  var error_message = form.find(".error");
+  var success_message = form.find(".success");
+
+  const phoneRegex =
+    /^([+]?[\s0-9]+)?(\(\d{2,}\)|[(]?[0-9]+[)])?([-]?[\s]?[0-9]+[-]?\s?)+$/;
+
+  if (!phone_value.match(phoneRegex) || phone_value.length < 7) {
+    phone.focus();
+    error_message.text("Невірний номер телефону");
+    success_message.text("");
+    return;
+  }
+});
 let insideOrOutside = "";
 function confirmInsideMachine() {
+  form = document.querySelector(".confirm_popup_cont");
+  form.style.display = "flex";
+
   var machineType = document.getElementsByName("inside_machine");
   var condition = document.getElementsByName("inside_newby");
   var city = document.getElementById("citySearch").value;
@@ -218,7 +329,17 @@ function confirmInsideMachine() {
   console.log(city);
   console.log(quantity);
 }
+function closeConfirmPopup() {
+  form = document.querySelector(".confirm_popup_cont");
+  form2 = document.querySelector(".confirm_popup_cont2");
+
+  form.style.display = "none";
+  form2.style.display = "none";
+}
 function confirmOutsideMachine() {
+  form = document.querySelector(".confirm_popup_cont2");
+  form.style.display = "flex";
+
   var machineType = document.getElementsByName("outside_machine");
   var condition = document.getElementsByName("outside_newby");
   var city = document.getElementById("citySearch").value;
